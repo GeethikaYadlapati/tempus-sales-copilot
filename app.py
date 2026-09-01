@@ -86,7 +86,8 @@ CSS = """
   .gtag {font-size:14px; font-weight:600; color:#16233D;}
   .gcount {font-size:12px; color:#8A9290;}
   .gwho {font-size:12px; color:#8A9290; margin:3px 0 6px;}
-  .gans {font-size:13px; line-height:1.55; color:#3D4C63;}
+  .gans {font-size:13px; line-height:1.55; color:#3D4C63;
+         margin-top:2px;}
   div[data-testid="stExpander"] details {border:none !important;
        background:transparent !important;}
   div[data-testid="stExpander"] summary {font-size:13px; color:#1F6F62;
@@ -95,6 +96,8 @@ CSS = """
        border-radius:12px;}
   .stButton button {border-radius:20px; font-size:12px; font-weight:600;
        padding:4px 14px; border:1px solid #E1E5E3; white-space:nowrap;}
+  /* glossary filter icon: compact, square-ish, no label padding */
+  div[data-testid="column"]:last-child .stButton button {padding:4px 6px;}
   .stButton button p {white-space:nowrap; margin:0;}
   div[data-testid="stPopover"] button {white-space:nowrap;}
 </style>
@@ -260,8 +263,6 @@ with upload:
     # nudges the control down to sit level with the title block
     html('<div style="height:34px"></div>')
     with st.popover("Upload data", use_container_width=True):
-        st.caption("Seasonal sources. Try the files in data/test_uploads/.")
-
         mi = st.file_uploader("Market intelligence (CSV)", type=["csv"],
                               key="up_mi")
         if mi and st.button("Upload MI", use_container_width=True):
@@ -579,16 +580,23 @@ with right:
             new_badge = ("" if tag in dl.TAG_TO_CHUNK
                          else ' <span class="tag tag-new">new</span>')
             with st.container(border=True):
-                html(f'<span class="gtag">{tag}</span>{new_badge} '
-                     f'<span class="gcount">· {len(who)} '
-                     f'{"providers" if len(who) > 1 else "provider"}</span>'
-                     f'<div class="gwho">{" · ".join(who)}</div>'
-                     f'<div class="gans">{answer}</div>')
-                if st.button("Clear filter" if active else "Filter list",
-                             key=f"b_{tag}", use_container_width=True,
-                             type="primary" if active else "secondary"):
-                    st.session_state.obj_filter = None if active else tag
-                    st.rerun()
+                head, icon = st.columns([5, 1])
+                with head:
+                    html(f'<span class="gtag">{tag}</span>{new_badge} '
+                         f'<span class="gcount">· {len(who)} '
+                         f'{"providers" if len(who) > 1 else "provider"}'
+                         f'</span>')
+                with icon:
+                    if st.button(":material/close:" if active
+                                 else ":material/filter_alt:",
+                                 key=f"b_{tag}",
+                                 help=("Clear this filter" if active
+                                       else f"Filter the list to {tag}"),
+                                 use_container_width=True,
+                                 type="primary" if active else "secondary"):
+                        st.session_state.obj_filter = None if active else tag
+                        st.rerun()
+                html(f'<div class="gans">{answer}</div>')
 
 html('<p class="prov" style="text-align:center;margin-top:22px">'
      'Prototype · provider names and CRM notes are fictional mock data. '
