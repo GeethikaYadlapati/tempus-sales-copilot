@@ -94,7 +94,9 @@ CSS = """
   div[data-testid="stVerticalBlockBorderWrapper"] {background:#FFFFFF;
        border-radius:12px;}
   .stButton button {border-radius:20px; font-size:12px; font-weight:600;
-       padding:3px 14px; border:1px solid #E1E5E3;}
+       padding:4px 14px; border:1px solid #E1E5E3; white-space:nowrap;}
+  .stButton button p {white-space:nowrap; margin:0;}
+  div[data-testid="stPopover"] button {white-space:nowrap;}
 </style>
 """
 html(CSS)
@@ -247,7 +249,7 @@ def regenerate_provider(p, cached_gen=None):
 # Header + seasonal uploads
 # ---------------------------------------------------------------------------
 
-head, upload = st.columns([3, 1.15])
+head, upload = st.columns([2.6, 1])
 with head:
     html('<div class="eyebrow">Tempus / Field enablement</div>'
          '<div class="title">Sales Copilot</div>'
@@ -255,7 +257,8 @@ with head:
          '</p>')
 
 with upload:
-    st.write("")
+    # nudges the control down to sit level with the title block
+    html('<div style="height:34px"></div>')
     with st.popover("Upload data", use_container_width=True):
         st.caption("Seasonal sources. Try the files in data/test_uploads/.")
 
@@ -352,7 +355,7 @@ with left:
          '<p class="sechint">Ordered by impact. Click a provider for their '
          'objections and pitch.</p>')
 
-    f1, f2, f3, _ = st.columns([1.15, 1, 1.1, 2.2])
+    f1, f2, f3, _ = st.columns([1.3, 1.25, 1.35, 1.6])
     with f1:
         html('<span class="pill-lock">&#128274; Impact</span>')
     with f2:
