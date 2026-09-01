@@ -1,0 +1,112 @@
+{
+ "ba657e69ee4f18bd": {
+  "label": "Chen \u2014 satisfied mention + real cost barrier",
+  "expected": "Turnaround NOT tagged (satisfied mention); Cost tagged",
+  "extraction": {
+   "objection_contexts": {
+    "Cost": "The department is under pressure on send-out spend this quarter and any new test would face questions about per-patient cost."
+   },
+   "new_tags": [],
+   "barrier_type": "stated",
+   "entire_note_context": "Satisfied with his current vendor's ten to twelve day turnaround and not looking to change. New pressure on send-out spend means per-patient cost questions for any new test.",
+   "vendor_sentiment": "satisfied",
+   "ease_signal": "committee",
+   "receptivity": "warm"
+  },
+  "generated": {
+   "handlers": {
+    "Cost": "Send-out spend pressure is a fair gate, and this does not have to land as a new standing cost. Financial assistance is income-based with decisions typically returned at submission, so cost is handled per patient rather than per budget line."
+   },
+   "pitch": "Marcus, I know your current workflow is working and I am not here to change it. You mentioned the department is under pressure on send-out spend this quarter. Tempus handles cost per patient \u2014 financial assistance is income-based with decisions typically returned at submission, so a test does not land as a new standing budget line. Worth a short conversation about how that works before cost questions come up?"
+  }
+ },
+ "79cf853a91b9f1a1": {
+  "label": "Siddiqui \u2014 unmatchable barrier, mints a tag",
+  "expected": "New tag 'EHR Integration' minted; no stored mapping, so retrieval falls back to global semantic search, which finds the ordering-channels fact",
+  "extraction": {
+   "objection_contexts": {
+    "EHR Integration": "Their Epic build has no ordering pathway for outside molecular tests, so every external order means a paper requisition and manual result entry."
+   },
+   "new_tags": [
+    "EHR Integration"
+   ],
+   "barrier_type": "stated",
+   "entire_note_context": "Interested, but staff will push back on any vendor until ordering lives inside their Epic build; today every external order is paper plus manual result entry.",
+   "vendor_sentiment": "unknown",
+   "ease_signal": "new_workflow",
+   "receptivity": "warm"
+  },
+  "generated": {
+   "handlers": {
+    "EHR Integration": "Orders can be placed through the Tempus Hub portal, a paper requisition, or directly from an integrated EHR. Whether your specific Epic build is supported is worth confirming precisely rather than promising \u2014 I will bring the integration answer for your configuration."
+   },
+   "pitch": "Fatima, you were clear that nothing moves until ordering lives inside your Epic build, and that is a reasonable line. Tempus supports ordering through its portal, by requisition, or directly from an integrated EHR. What I owe you is the precise answer for your configuration rather than a general claim. Worth a short conversation once I bring that back?",
+   "glossary": {
+    "EHR Integration": "Ordering channels are the answer here: the Tempus Hub portal, paper requisition, or direct ordering from an integrated EHR. Confirm the provider's specific EHR configuration before promising integration."
+   }
+  }
+ },
+ "6031ab7c18f8d854": {
+  "label": "Kim \u2014 'TAT is brutal' phrasing",
+  "expected": "Matches existing Turnaround tag; no TAT tag minted. Cost kept.",
+  "extraction": {
+   "objection_contexts": {
+    "Turnaround": "The TAT on their current send-outs is brutal, sometimes three weeks, and by then the treatment plan is already locked.",
+    "Cost": "Still needs finance committee sign-off for anything new."
+   },
+   "new_tags": [],
+   "barrier_type": "stated",
+   "entire_note_context": "Send-out turnaround sometimes runs three weeks, arriving after the treatment plan is locked. Finance committee sign-off still gates any new vendor. Warmer than last contact.",
+   "vendor_sentiment": "unknown",
+   "ease_signal": "committee",
+   "receptivity": "warm"
+  },
+  "generated": {
+   "handlers": {
+    "Turnaround": "Three-week send-outs that land after the plan is locked defeat the point of testing. Tempus xF returns results typically within 7 days of specimen retrieval \u2014 inside the window where it can still change the decision.",
+    "Cost": "The committee gate has not moved, so bring them the access answer: financial assistance is income-based with decisions typically returned at submission, so cost is handled per patient rather than as a standing line."
+   },
+   "pitch": "Grace, you said the turnaround on your current send-outs is brutal \u2014 sometimes three weeks, with the plan already locked by the time results land. Tempus xF is a blood draw returning results typically within about seven days, inside the window where it can still change a decision. I know the finance committee still gates anything new. Worth a short conversation before your next review cycle?"
+  }
+ },
+ "50909feae5e39462": {
+  "label": "Zhang \u2014 voicemail only",
+  "expected": "No tags; receptivity may read not_looking; neutral elsewhere",
+  "extraction": {
+   "objection_contexts": {},
+   "new_tags": [],
+   "barrier_type": "none",
+   "entire_note_context": "Third unreturned voicemail this quarter.",
+   "vendor_sentiment": "unknown",
+   "ease_signal": "unknown",
+   "receptivity": "not_looking"
+  },
+  "generated": {
+   "handlers": {},
+   "pitch": "Wei, for sarcoma and rare tumours the hardest part is usually what comes after an unusual finding. Tempus pairs sequencing with clinical trial matching \u2014 in our data roughly ninety-six percent of patients matched to at least one trial when clinical data was combined with sequencing results. For rare mutations where local options are thin, that can open real doors. Worth a short conversation whenever your schedule allows?"
+  }
+ },
+ "9f1e3f438244fad8": {
+  "label": "Marsh \u2014 two objections in one note",
+  "expected": "Turnaround + Cost both tagged, each with its own context",
+  "extraction": {
+   "objection_contexts": {
+    "Turnaround": "Results landing after empiric chemo has started make the test pointless; one recent case took nearly three weeks.",
+    "Cost": "Several patients are underinsured and she will not order a test that leaves them with a surprise bill; asked what patients actually pay out of pocket."
+   },
+   "new_tags": [],
+   "barrier_type": "stated",
+   "entire_note_context": "Send-out results arrive after empiric chemo has started, one recent case near three weeks. Will not order anything that exposes underinsured patients to surprise bills, and asked directly about out-of-pocket cost. Wants an answer before the next meeting.",
+   "vendor_sentiment": "unknown",
+   "ease_signal": "new_workflow",
+   "receptivity": "warm"
+  },
+  "generated": {
+   "handlers": {
+    "Turnaround": "A result that lands after empiric chemo starts is a wasted test, and your recent case ran nearly three weeks. Tempus xF is a blood draw with results typically within 7 days of specimen retrieval \u2014 built to arrive before the first treatment decision.",
+    "Cost": "The surprise-bill worry is exactly what the financial assistance programme addresses: it is income-based, with approval decisions typically returned at submission, so you know a patient's exposure before the order goes in."
+   },
+   "pitch": "Linda, you asked directly what patients actually pay out of pocket, and that deserves a direct answer. Tempus financial assistance is income-based, with approval decisions typically returned at submission \u2014 so you know a patient's exposure before you order, not after. That protects exactly the underinsured patients you described. Worth a short conversation to walk through the numbers you asked for?"
+  }
+ }
+}

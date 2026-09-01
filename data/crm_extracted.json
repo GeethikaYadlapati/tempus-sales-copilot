@@ -1,0 +1,136 @@
+{
+  "_comment": "Output of the CRM ingestion call (one constrained-JSON call per note). Cached so the demo runs without API latency. Regenerate with `python ingest.py --crm`.",
+  "glossary": ["Turnaround", "Tissue", "Referral", "Outcomes", "Cost", "Actionability", "Incumbent"],
+  "providers": {
+    "P01": {
+      "objection_tags": ["Outcomes"],
+      "objection_contexts": {
+        "Outcomes": "Two affiliated practices test below the network average; asked for before/after adoption data from comparable health systems."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "CMO tracking network-wide testing adoption as a value-based contract quality metric. Wants comparative adoption evidence.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "committee",
+      "receptivity": "warm",
+      "open_loop": true,
+      "last_contact": "2026-02-20"
+    },
+    "P02": {
+      "objection_tags": ["Incumbent"],
+      "objection_contexts": {
+        "Incumbent": "Satisfied with FoundationOne at 10-12 days and not shopping vendors; open to a blood-based option only where repeat biopsy is risky."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "Happy with current vendor and workflow. Narrow opening around patients where re-biopsy carries risk. Wants comparative data before any change.",
+      "vendor_sentiment": "satisfied",
+      "ease_signal": "new_order",
+      "receptivity": "passive",
+      "open_loop": false,
+      "last_contact": "2026-03-02"
+    },
+    "P03": {
+      "objection_tags": ["Referral"],
+      "objection_contexts": {
+        "Referral": "An external genetics referral adds three to four weeks before a PARP-inhibitor decision can be finalised."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "Breast/gyn oncologist losing weeks to outside genetics referrals before PARP decisions. Asked directly whether HRD can attach to an existing order without a new biopsy.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "add_on",
+      "receptivity": "warm",
+      "open_loop": true,
+      "last_contact": "2026-02-11"
+    },
+    "P04": {
+      "objection_tags": ["Turnaround"],
+      "objection_contexts": {
+        "Turnaround": "A Guardant360 order took 21 days and the patient had already started empiric second-line chemo before results returned."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "GI oncologist frustrated by a 21-day competitor turnaround that arrived after treatment had started. Asked for a specific day-count.",
+      "vendor_sentiment": "dissatisfied",
+      "ease_signal": "new_order",
+      "receptivity": "warm",
+      "open_loop": true,
+      "last_contact": "2026-02-14"
+    },
+    "P05": {
+      "objection_tags": ["Cost"],
+      "objection_contexts": {
+        "Cost": "The finance committee will want patient cost addressed before any new vendor is approved."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "Community hospital haematologist on a narrow in-house PCR panel. Open to broader testing but gated on a finance committee.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "committee",
+      "receptivity": "neutral",
+      "open_loop": false,
+      "last_contact": "2026-01-30"
+    },
+    "P06": {
+      "objection_tags": ["Outcomes"],
+      "objection_contexts": {
+        "Outcomes": "Wants evidence tied to survival or response, not gene counts, before recommending a vendor change to oncology staff."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "CMO who needs board-facing outcomes evidence. Asked whether real-world immunotherapy outcomes data is available at network level.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "committee",
+      "receptivity": "neutral",
+      "open_loop": true,
+      "last_contact": "2026-02-25"
+    },
+    "P07": {
+      "objection_tags": ["Actionability"],
+      "objection_contexts": {
+        "Actionability": "Said there isn't much actionable in pancreatic anyway; unaware RNA subtyping can inform first-line regimen choice."
+      },
+      "barrier_type": "unrecognised",
+      "entire_note_context": "Pancreatic oncologist ordering almost no molecular testing. Reads as a knowledge gap rather than a stated objection.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "new_workflow",
+      "receptivity": "neutral",
+      "open_loop": false,
+      "last_contact": "2026-01-17"
+    },
+    "P08": {
+      "objection_tags": ["Tissue"],
+      "objection_contexts": {
+        "Tissue": "Burned by a quantity-not-sufficient result from a prior vendor after a multi-week wait; prostate biopsies often yield limited tissue."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "GU oncologist wary of insufficient-tissue failures after a prior QNS result. No current comprehensive vendor.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "new_order",
+      "receptivity": "warm",
+      "open_loop": false,
+      "last_contact": "2026-02-08"
+    },
+    "P09": {
+      "objection_tags": ["Incumbent"],
+      "objection_contexts": {
+        "Incumbent": "Says FoundationOne covers his broad-panel needs; main unmet interest is trial matching for rare mutations."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "Sarcoma oncologist settled on an incumbent for broad panels. Interested in trial matching for unusual mutations where local options are thin.",
+      "vendor_sentiment": "satisfied",
+      "ease_signal": "new_order",
+      "receptivity": "not_looking",
+      "open_loop": false,
+      "last_contact": "2025-11-12"
+    },
+    "P10": {
+      "objection_tags": ["Turnaround"],
+      "objection_contexts": {
+        "Turnaround": "By the time send-out results come back she has usually already started empiric chemo, which defeats the purpose."
+      },
+      "barrier_type": "stated",
+      "entire_note_context": "Community thoracic oncologist with no in-house testing, relying on inconsistent local send-out. Turnaround is her stated blocker to adopting comprehensive testing at all.",
+      "vendor_sentiment": "unknown",
+      "ease_signal": "new_workflow",
+      "receptivity": "warm",
+      "open_loop": true,
+      "last_contact": "2026-02-19"
+    }
+  }
+}

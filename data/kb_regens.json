@@ -1,0 +1,18 @@
+{
+ "f242f999aa31a010": {
+  "glossary": {
+   "Turnaround": "Anchor to the wait they described. xF returns typically within 5 days of specimen retrieval, xF+ within 6 to 8, xT Heme within 9 days of receipt."
+  },
+  "handlers": {
+   "P04|Turnaround": "You asked for a real number rather than a marketing one: Tempus xF now returns results typically within 5 days of specimen retrieval, and xF+ within 6 to 8. That is roughly a quarter of the 21-day wait you described.",
+   "P08|Turnaround": "The wait made the quantity-not-sufficient result worse, because the time was lost before you knew there was a problem. Auto-conversion to xF means an insufficient sample does not restart the clock \u2014 the blood draw returns typically within 5 days.",
+   "P10|Turnaround": "A result that lands after empiric chemo starts is a wasted test, and your recent case ran nearly three weeks. Tempus xF is a blood draw with results typically within 5 days of specimen retrieval \u2014 built to arrive before the first treatment decision.",
+   "P05|Turnaround": "Three-week send-outs that land after the plan is locked defeat the point of testing. Tempus xF returns results typically within 5 days of specimen retrieval \u2014 inside the window where it can still change the decision."
+  },
+  "pitches": {
+   "P04": "Sam, last time we spoke your patient had already started second-line chemo before that twenty-one day result came back. Tempus xF is a blood draw with results now typically in about five days \u2014 roughly a quarter of the wait you described. That is the difference between informing a decision and confirming one already made. Worth a short conversation about how that maps onto your treatment window?",
+   "P10": "Linda, you told me results usually land after you have already started empiric chemo, which defeats the purpose. Tempus xF is a blood draw with results now typically back in about five days. It is built to arrive before your first treatment decision rather than after it, even when the clinical clock is tight. Worth a short conversation about how that would fit your workflow?",
+   "P05": "Grace, you said the turnaround on your current send-outs is brutal \u2014 sometimes three weeks, with the plan already locked by the time results land. Tempus xF is a blood draw returning results now typically within about five days, well inside the decision window. I know the finance committee still gates anything new. Worth a short conversation before your next review cycle?"
+  }
+ }
+}

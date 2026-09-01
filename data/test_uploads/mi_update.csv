@@ -1,0 +1,12 @@
+provider_id,name,title,specialty,hospital_system,territory,annual_patient_volume,testing_rate_pct,current_vendor,referring_network_size,role_type
+P01,Dr. Elena Vasquez,Chief Medical Officer,Multi-Tumor / Network Oversight,Riverbend Health System,Columbus,2400,63,Mixed,42,administrator
+P02,Dr. Marcus Chen,Medical Oncologist,Thoracic (Lung),Riverbend Cancer Institute,Columbus,310,74,FoundationOne CDx,18,physician
+P03,Dr. Priya Raman,Medical Oncologist,Breast / Gynecologic,Lakeside Comprehensive,Dayton,285,36,None,25,physician
+P04,Dr. Samuel Okafor,Medical Oncologist,GI / Colorectal,Lakeside Comprehensive,Dayton,190,61,Guardant360,20,physician
+P05,Dr. Grace Kim,Hematologist-Oncologist,Hematologic Malignancies,Heartland Regional,Toledo,140,40,In-house PCR panel,12,physician
+P06,Dr. Aaron Weiss,Chief Medical Officer,Multi-Tumor / Network Oversight,Heartland Regional,Toledo,1800,47,Mixed,30,administrator
+P07,Dr. Fatima Siddiqui,Medical Oncologist,Pancreatic / GI,Riverbend Cancer Institute,Columbus,85,22,None,15,physician
+P08,Dr. Robert Lindqvist,Medical Oncologist,Prostate / GU,Lakeside Comprehensive,Dayton,150,41,None,19,physician
+P09,Dr. Wei Zhang,Medical Oncologist,Sarcoma / Rare Tumors,Riverbend Cancer Institute,Columbus,60,50,FoundationOne,10,physician
+P10,Dr. Linda Marsh,Medical Oncologist,Thoracic (Lung),Heartland Regional,Toledo,95,28,None,14,physician
+P11,Dr. Owen Park,Medical Oncologist,Thoracic (Lung),Riverbend Cancer Institute,Columbus,220,55,None,16,physician
